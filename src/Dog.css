@@ -1,0 +1,25 @@
+.Dog {
+  width: 50%;
+  max-width: 300px;
+  margin: 1em auto;
+  border: 3px solid red;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.Dog-adoptable {
+  border-color: limegreen;
+}
+
+.Dog > h3 {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+.Dog > p {
+  margin: 0.25em;
+}
+
+.Dog-image {
+  width: 100%;
+}
