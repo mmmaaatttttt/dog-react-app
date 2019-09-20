@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Dog from "./Dog";
+import NewDogForm from "./NewDogForm";
 
 class DogList extends Component {
   constructor(props) {
@@ -15,12 +16,18 @@ class DogList extends Component {
         }
       ]
     };
+    this.addDog = this.addDog.bind(this);
+  }
+
+  addDog(newDog) {
+    this.setState(st => ({ dogs: [...st.dogs, newDog] }));
   }
 
   render() {
     return (
       <div>
         Look at all of these dogs!!!
+        <NewDogForm handleAdd={this.addDog} />
         {this.state.dogs.map(dog => (
           <Dog dog={dog} />
         ))}
